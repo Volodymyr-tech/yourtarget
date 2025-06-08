@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = []
-AUTH_USER_MODEL = "users.CustomUser"
+
 
 # Application definition
 
@@ -146,7 +146,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+AUTH_USER_MODEL = "users.CustomUser"
 
 #CKEditor settings
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
@@ -155,6 +155,8 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 CKEDITOR_CONFIGS = {
     'awesome_ckeditor': {
-        'toolbar': 'Basic',
+        'toolbar': 'full',
+        'height': 300,
+        'width': 900,
     },
 }

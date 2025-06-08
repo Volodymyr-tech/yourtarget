@@ -1,7 +1,7 @@
 {% extends "includes/base.html" %}
-{% loadstatic %}
+{% load static %}
 {% block title %}Why Your Website Isn’t Bringing You Clients{% endblock %}
-{% blockcontent %}
+{% block content %}
         <!-- Start Post Single Wrapper  -->
         <div class="post-single-wrapper axil-section-gap bg-color-white">
             <div class="container">
@@ -25,27 +25,9 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <h1 class="title">{{blog_post.name}}</h1>
+                                                <h1 class="title">{{ blog_post.title }}</h1>
                                                 <!-- Post Meta  -->
                                                 <div class="post-meta-wrapper">
-                                                    <div class="post-meta">
-                                                        <div class="post-author-avatar border-rounded">
-                                                            <img src="assets/images/post-images/author/author-image-3.png" alt="Author Images">
-                                                        </div>
-                                                        <div class="content">
-                                                            <h6 class="post-author-name">
-                                                                <a class="hover-flip-item-wrapper" href="author.html">
-                                                                    <span class="hover-flip-item">
-                                                                        <span data-text="Ismat Jahan">Ismat Jahan</span>
-                                                                    </span>
-                                                                </a>
-                                                            </h6>
-                                                            <ul class="post-meta-list">
-                                                                <li>Feb 17, 2019</li>
-                                                                <li>300k Views</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
                                                     <ul class="social-share-transparent justify-content-end">
                                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -67,90 +49,18 @@
                             <p class="has-medium-font-size">Winners are recognized for outstanding app design,
                                 innovation, ingenuity, and technical achievement</p>
                             <figure class="wp-block-image">
-                                <img src="assets/images/post-single/post-single-05.jpg" alt="Post Images">
+                                <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}">
                                 <figcaption>The Apple Design Award trophy, created by the Apple Design team, is a symbol
                                     of achievement and excellence.</figcaption>
                             </figure>
-                            <p>Apple today named eight app and game developers receiving an Apple Design Award, each one
-                                selected for being thoughtful and creative. Apple Design Award winners bring distinctive
-                                new ideas to life and demonstrate deep mastery of Apple technology. The apps spring up
-                                from developers large and small, in every part of the world, and provide users with new
-                                ways of working, creating, and playing.</p>
-                            <p>“Every year, app and game developers demonstrate exceptional craftsmanship and we’re
-                                honoring the best of the best,” said Ron Okamoto, Apple’s vice president of Worldwide
-                                Developer Relations. “Receiving an Apple Design Award is a special and laudable
-                                accomplishment. Past honorees have made some of the most noteworthy apps and games of
-                                all time. Through their vision, determination, and exacting standards, the winning
-                                developers inspire not only their peers in the Apple developer community, but all of us
-                                at Apple, too.”</p>
-                            <h2>Apple Design Award Winners: Apps</h2>
-                            <p> Apple today named eight app and game developers receiving an Apple Design Award, each
-                                one selected for being thoughtful and creative. Apple Design Award winners bring
-                                distinctive new ideas to life and demonstrate deep mastery of Apple technology. The apps
-                                spring up from developers large and small, in every part of the world, and provide users
-                                with new ways of working, creating, and playing.</p>
-                            <p>“Every year, app and game developers demonstrate exceptional craftsmanship and we’re
-                                honoring the best of the best,” said Ron Okamoto, Apple’s vice president of Worldwide
-                                Developer Relations. “Receiving an Apple Design Award is a special and laudable
-                                accomplishment. Past honorees have made some of the most noteworthy apps and games of
-                                all time. Through their vision, determination, and exacting standards, the winning
-                                developers inspire not only their peers in the Apple developer community, but all of us
-                                at Apple, too.”</p>
-                            <blockquote>
-                                <p>“Most of us felt like we could trust each other to be quarantined together, so we
-                                    didn’t need to wear masks or stay far apart.”</p>
-                            </blockquote>
-                            <figure class="wp-block-image">
-                                <img src="assets/images/post-single/post-single-03.jpg" alt="Post Images">
-                                <figcaption>The Apple Design Award trophy, created by the Apple Design team, is a symbol
-                                    of achievement and excellence.</figcaption>
-                            </figure>
-                            <h2>Apple Design Award Winners: Apps</h2>
-                            <p><a href="#">Apple today named</a> eight app and game developers receiving an Apple Design
-                                Award, each one selected for being thoughtful and creative. Apple Design Award winners
-                                bring distinctive new ideas to life and demonstrate deep mastery of Apple technology.
-                                The apps spring up from developers large and small, in every part of the world, and
-                                provide users with new ways of working, creating, and playing.</p>
-                            <p>“Every year, app and game developers demonstrate exceptional craftsmanship and we’re
-                                honoring the best of the best,” said Ron Okamoto, Apple’s vice president of Worldwide
-                                Developer Relations. “Receiving an Apple Design Award is a special and laudable
-                                accomplishment. Past honorees have made some of the most noteworthy apps and games of
-                                all time. Through their vision, determination, and exacting standards, the winning
-                                developers inspire not only their peers in the Apple developer community, but all of us
-                                at Apple, too.”</p>
-                            <figure class="wp-block-image">
-                                <img src="assets/images/post-single/post-single-04.jpg" alt="Post Images">
-                                <figcaption>The Apple Design Award trophy, created by the Apple Design team, is a symbol
-                                    of achievement and excellence.</figcaption>
-                            </figure>
-                            <h3>Apple Design Award Winners: Apps </h3>
-                            <p> <a href="#">Apple today named</a> eight app and game developers receiving an Apple
-                                Design Award, each one selected for being thoughtful and creative. Apple Design Award
-                                winners bring distinctive new ideas to life and demonstrate deep mastery of Apple
-                                technology. The apps spring up from developers large and small, in every part of the
-                                world, and provide users with new ways of working, creating, and playing.</p>
-                            <p>“Every year, app and game developers demonstrate exceptional craftsmanship and we’re
-                                honoring the best of the best,” said Ron Okamoto, Apple’s vice president of Worldwide
-                                Developer Relations. “Receiving an Apple Design Award is a special and laudable
-                                accomplishment. Past honorees have made some of the most noteworthy apps and games of
-                                all time. Through their vision, determination, and exacting standards, the winning
-                                developers inspire not only their peers in the Apple developer community, but all of us
-                                at Apple, too.”</p>
-                            <p>More than 250 developers have been recognized with Apple Design Awards
-                                over the past 20 years. The recognition has proven to be an accelerant for developers
-                                who are pioneering innovative designs within their individual apps and influencing
-                                entire categories. Previous winners such as Pixelmator, djay, Complete Anatomy,
-                                HomeCourt, “Florence,” and “Crossy Road” have set the standard in areas such as
-                                storytelling, interface design, and use of Apple tools and technologies.</p>
-                            <p>For more information on the apps and games, visit the <a href="#">App Store</a>.</p>
+                            <div class="content">
+                              {{ blog_post.content|safe }}
+                            </div>
 
-                            <div class="tagcloud">
-                                <a href="#">Design</a>
-                                <a href="#">Life Style</a>
-                                <a href="#">Web Design</a>
-                                <a href="#">Development</a>
-                                <a href="#">Design</a>
-                                <a href="#">Life Style</a>
+                            <div class="tagcloud mt-5">
+                                {% for category in categories %}
+                                <a href="#">{{category}}</a>
+                                {% endfor %}
                             </div>
 
                             <div class="social-share-block">
@@ -165,51 +75,16 @@
                                 </ul>
                             </div>
 
-                            <!-- Start Author  -->
-                            <div class="about-author">
-                                <div class="media">
-                                    <div class="thumbnail">
-                                        <a href="#">
-                                            <img src="assets/images/post-images/author/author-b1.png" alt="Author Images">
-                                        </a>
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="author-info">
-                                            <h5 class="title">
-                                                <a class="hover-flip-item-wrapper" href="#">
-                                                    <span class="hover-flip-item">
-                                                        <span data-text="Rahabi Ahmed Khan">Rahabi Ahmed Khan</span>
-                                                    </span>
-                                                </a>
-                                            </h5>
-                                            <span class="b3 subtitle">Sr. UX Designer</span>
-                                        </div>
-                                        <div class="content">
-                                            <p class="b1 description">At 29 years old, my favorite compliment is being
-                                                told that I look like my mom. Seeing myself in her image, like this
-                                                daughter up top, makes me so proud of how far I’ve come, and so thankful
-                                                for where I come from.</p>
-                                            <ul class="social-share-transparent size-md">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="far fa-envelope"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <!-- End Author  -->
 
                             <!-- Start Comment Form Area  -->
                             <div class="axil-comment-area">
                                 <div class="axil-total-comment-post">
                                     <div class="title">
-                                        <h4 class="mb--0">30+ Comments</h4>
+                                        <h4 class="mb--0">Book a quick call — we’ll find what’s slowing you down.</h4>
                                     </div>
                                     <div class="add-comment-button cerchio">
-                                        <a class="axil-button button-rounded" href="post-details.html" tabindex="0"><span>Add Your Comment</span></a>
+                                        <a class="axil-button button-rounded" href="post-details.html" tabindex="0"><span>Write to us</span></a>
                                     </div>
                                 </div>
 
@@ -454,73 +329,33 @@
 
                             <!-- Start Single Widget  -->
                             <div class="axil-single-widget widget widget_postlist mb--30">
-                                <h5 class="widget-title">Popular on Blogar</h5>
+                                <h5 class="widget-title">Popular on Your Target</h5>
                                 <!-- Start Post List  -->
                                 <div class="post-medium-block">
 
                                     <!-- Start Single Post  -->
+                                    {% for post in popular_posts %}
                                     <div class="content-block post-medium mb--20">
+
                                         <div class="post-thumbnail">
                                             <a href="post-details.html">
-                                                <img src="assets/images/small-images/blog-sm-01.jpg" alt="Post Images">
+                                                <img src="{{ post.image.url }}" alt="Post Images">
                                             </a>
                                         </div>
                                         <div class="post-content">
-                                            <h6 class="title"><a href="post-details.html">The underrated design book that transformed the way I
-                                                    work </a></h6>
+                                            <h6 class="title"><a href="{{ post.get_absolute_url }}"> {{ post.title }} </a></h6>
                                             <div class="post-meta">
                                                 <ul class="post-meta-list">
-                                                    <li>Feb 17, 2019</li>
-                                                    <li>300k Views</li>
+                                                    <li>{{ post.created_at }}</li>
+                                                    <li>{{ post.views }}</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    {% endfor %}
                                     <!-- End Single Post  -->
-
-                                    <!-- Start Single Post  -->
-                                    <div class="content-block post-medium mb--20">
-                                        <div class="post-thumbnail">
-                                            <a href="post-details.html">
-                                                <img src="assets/images/small-images/blog-sm-02.jpg" alt="Post Images">
-                                            </a>
-                                        </div>
-                                        <div class="post-content">
-                                            <h6 class="title"><a href="post-details.html">Here’s what you should (and shouldn’t) do when</a>
-                                            </h6>
-                                            <div class="post-meta">
-                                                <ul class="post-meta-list">
-                                                    <li>Feb 17, 2019</li>
-                                                    <li>300k Views</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Post  -->
-
-                                    <!-- Start Single Post  -->
-                                    <div class="content-block post-medium">
-                                        <div class="post-thumbnail">
-                                            <a href="post-details.html">
-                                                <img src="assets/images/small-images/blog-sm-03.jpg" alt="Post Images">
-                                            </a>
-                                        </div>
-                                        <div class="post-content">
-                                            <h6 class="title"><a href="post-details.html">How a developer and designer duo at Deutsche Bank keep
-                                                    remote</a></h6>
-                                            <div class="post-meta">
-                                                <ul class="post-meta-list">
-                                                    <li>Feb 17, 2019</li>
-                                                    <li>300k Views</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Post  -->
-
                                 </div>
                                 <!-- End Post List  -->
-
                             </div>
                             <!-- End Single Widget  -->
 
@@ -530,12 +365,15 @@
                                 <div class="newsletter-inner text-center">
                                     <h4 class="title mb--15">Never Miss A Post!</h4>
                                     <p class="b2 mb--30">Sign up for free and be the first to <br /> get notified about updates.</p>
-                                    <form action="#">
+                                    <form method="post" action="{% url 'blog:subscribe' %}">  <!-- need to add action -->
+                                        {% csrf_token %}
                                         <div class="form-group">
-                                            <input type="text" placeholder="Enter Your Email ">
+                                            <input type="email" name="email" placeholder="Enter Your Email" required>
                                         </div>
                                         <div class="form-submit">
-                                            <button class="cerchio axil-button button-rounded"><span>Subscribe</span></button>
+                                            <button type="submit" class="cerchio axil-button button-rounded">
+                                                <span>Subscribe</span>
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
@@ -611,17 +449,6 @@
                             <!-- End Single Widget  -->
 
                             <!-- Start Single Widget  -->
-                            <div class="axil-single-widget widget widget_archive mb--30">
-                                <h5 class="widget-title">Archives</h5>
-                                <!-- Start Post List  -->
-                                <ul>
-                                    <li><a href="#">January 2020</a></li>
-                                    <li><a href="#">February 2020</a></li>
-                                    <li><a href="#">March 2020</a></li>
-                                    <li><a href="#">April 2020</a></li>
-                                </ul>
-                                <!-- End Post List  -->
-                            </div>
                             <!-- End Single Widget  -->
 
 
@@ -677,101 +504,10 @@
                                         </div>
                                     </div>
                                     <!-- End Post List  -->
-
                                 </div>
                                 <!-- End Post List  -->
                             </div>
                             <!-- End Single Widget  -->
-
-
-                            <!-- Start Single Widget  -->
-                            <div class="axil-single-widget widget widget_tag_cloud mb--30">
-                                <h5 class="widget-title">Archives</h5>
-                                <!-- Start Post List  -->
-                                <div class="tagcloud">
-                                    <a href="#">Design</a>
-                                    <a href="#">Development</a>
-                                    <a href="#">Graphic</a>
-                                    <a href="#">UI/UX Design</a>
-                                    <a href="#">HTML</a>
-                                </div>
-                                <!-- End Post List  -->
-                            </div>
-                            <!-- End Single Widget  -->
-
-
-                            <!-- Start Single Widget  -->
-                            <div class="axil-single-widget widget widget_dropdown mb--30">
-                                <h5 class="widget-title">Archives</h5>
-                                <!-- Start Post List  -->
-                                <form action="#">
-                                    <select>
-                                        <option>Select Month</option>
-                                        <option>April 2020 (4)</option>
-                                        <option>March 2020 (3)</option>
-                                        <option>November 2018 (11)</option>
-                                        <option>January 2013 (5)</option>
-                                    </select>
-                                </form>
-                                <!-- End Post List  -->
-                            </div>
-                            <!-- End Single Widget  -->
-
-                            <!-- Start Single Widget  -->
-                            <div class="axil-single-widget widget widget_postlist mb--30">
-                                <h5 class="widget-title">Recent Post</h5>
-                                <!-- Start Post List  -->
-                                <div class="post-medium-block">
-
-                                    <!-- Start Single Post  -->
-                                    <div class="content-block post-medium mb--20">
-                                        <div class="post-content">
-                                            <h6 class="title"><a href="post-details.html">The underrated design book that transformed the way I
-                                                    work </a></h6>
-                                            <div class="post-meta">
-                                                <ul class="post-meta-list">
-                                                    <li>Feb 17, 2019</li>
-                                                    <li>300k Views</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Post  -->
-
-                                    <!-- Start Single Post  -->
-                                    <div class="content-block post-medium mb--20">
-                                        <div class="post-content">
-                                            <h6 class="title"><a href="post-details.html">Here’s what you should (and shouldn’t) do when</a>
-                                            </h6>
-                                            <div class="post-meta">
-                                                <ul class="post-meta-list">
-                                                    <li>Feb 17, 2019</li>
-                                                    <li>300k Views</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Post  -->
-
-                                    <!-- Start Single Post  -->
-                                    <div class="content-block post-medium">
-                                        <div class="post-content">
-                                            <h6 class="title"><a href="post-details.html">How a developer and designer duo at Deutsche Bank keep
-                                                    remote</a></h6>
-                                            <div class="post-meta">
-                                                <ul class="post-meta-list">
-                                                    <li>Feb 17, 2019</li>
-                                                    <li>300k Views</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Post  -->
-                                </div>
-                                <!-- End Post List  -->
-                            </div>
-                            <!-- End Single Widget  -->
-
                             <div class="axil-banner">
                                 <div class="thumbnail">
                                     <a href="#">
@@ -779,9 +515,6 @@
                                     </a>
                                 </div>
                             </div>
-
-
-
                         </div>
                         <!-- End Sidebar Area  -->
                     </div>
