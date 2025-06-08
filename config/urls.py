@@ -25,6 +25,7 @@ from config.settings import BASE_DIR
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('yourtarget.urls' , namespace="yourtarget")),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:
