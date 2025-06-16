@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 
 from blog.models import BlogPost, Services, Categories
+from yourtarget.services import CacheMainPage
 
 
 # def index(request):
@@ -24,11 +25,8 @@ class MainPageView(ListView):
     context_object_name = 'posts'
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["popular_posts"] = BlogPost.objects.filter(status='PUBLISHED').order_by("-views")[:7]
-        context["services_categories"] = Categories.objects.all()
-        context["services"] = Services.objects.all()
-        return context
+        print("⚡ get_cache_main_page запущен")
+        return CacheMainPage.get_cache_main_page(self.request)
 
 
 

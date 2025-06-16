@@ -39,11 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'yourtarget',
+    'debug_toolbar',
     'users',
     'rest_framework',
     'blog',
     'ckeditor',
     'ckeditor_uploader',
+
 
 ]
 
@@ -51,10 +53,12 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'yourtarget.middleware.MyMiddleWare',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -160,3 +164,19 @@ CKEDITOR_CONFIGS = {
         'width': 900,
     },
 }
+
+
+#Cache settings
+CACHE_ENABLED = True
+
+if CACHE_ENABLED:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+            'LOCATION': 'redis://127.0.0.1:6379/1',
+        }
+    }
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
