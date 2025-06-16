@@ -3,7 +3,7 @@ from django.views.decorators.http import require_POST
 from django.views.generic import DetailView, ListView
 
 from blog.forms import SubscribeForm
-from blog.models import BlogPost, CategoriesPost
+from blog.models import BlogPost, Categories
 
 
 # Create your views here.
@@ -23,7 +23,7 @@ class BlogDetailView(DetailView):
 
 
     extra_context = {
-        "categories": CategoriesPost.objects.all(),
+        "categories": Categories.objects.all(),
         "popular_posts": BlogPost.objects.filter(status='PUBLISHED').order_by(
             "-views"
         )[:3]
@@ -51,6 +51,10 @@ class BlogPostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["categories"] = CategoriesPost.objects.all()
+        context["categories"] = Categories.objects.all()
         context["popular_posts"] = BlogPost.objects.filter(status='PUBLISHED').order_by("-views")[:3]
         return context
+
+
+def cta(request):
+    return render(request, "cta.html")

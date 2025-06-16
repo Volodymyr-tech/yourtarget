@@ -50,14 +50,14 @@
                                                 <li class="vertical-nav-item active">
                                                     <a class="hover-flip-item-wrapper" href="#tab1">
                                                         <span class="hover-flip-item">
-                            <span data-text="Web Development & SEO">Web Development & SEO</span>
+                            <span data-text="Web Development & SEO" > Web Development & SEO</span>
                                                         </span>
                                                     </a>
                                                 </li>
                                                 <li class="vertical-nav-item">
                                                     <a class="hover-flip-item-wrapper" href="#tab2">
                                                         <span class="hover-flip-item">
-                            <span data-text="Advertising & Performance">Advertising & Performance</span>
+                            <span data-text="Advertising & Performance">Advertising & Performance</span >
                                                         </span>
                                                     </a>
                                                 </li>
@@ -90,21 +90,21 @@
                                                         <div class="col-lg-3">
                                                             <div class="content-block image-rounded">
                                                                 <div class="post-thumbnail mb--20">
-                                                                    <a href="post-details.html">
+                                                                    <a href="#">
                                                                         <img class="w-100" src="assets/images/others/mega-post-01.jpg" alt="Post Images">
                                                                     </a>
                                                                 </div>
                                                                 <div class="post-content">
                                                                     <div class="post-cat">
                                                                         <div class="post-cat-list">
-                                                                            <a class="hover-flip-item-wrapper" href="#">
+                                                                            <a class="hover-flip-item-wrapper" href="{% url 'yourtarget:service-detail' slug='web-dev' %}">
                                                                                 <span class="hover-flip-item">
                                                     <span data-text="Django/FastAPI">Django/FastAPI</span>
                                                                                 </span>
                                                                             </a>
                                                                         </div>
                                                                     </div>
-                                                                    <h5 class="title"><a href="post-details.html">Powerful backends for scalable business solutions — fast and secure.</a></h5>
+                                                                    <h5 class="title"><a href="{% url 'yourtarget:service-detail' slug='web-dev' %}">Powerful backends for scalable business solutions — fast and secure.</a></h5>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -566,18 +566,18 @@
 
             <div class="col-xl-3 col-lg-8 col-md-8 col-sm-9 col-12">
                 <div class="header-search text-end d-flex align-items-center">
-                    <form class="header-search-form d-sm-block d-none">
+                    <form class="header-search-form d-sm-block d-none" action="{% url 'yourtarget:search' %}">
                         <div class="axil-search form-group">
                             <button type="submit" class="search-button"><i class="fal fa-search"></i></button>
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Search" name="query">
                         </div>
                     </form>
                     <div class="mobile-search-wrapper d-sm-none d-block">
                         <button class="search-button-toggle"><i class="fal fa-search"></i></button>
-                        <form class="header-search-form">
+                        <form class="header-search-form " role="search" method="get" action="{% url 'yourtarget:search' %}">
                             <div class="axil-search form-group">
                                 <button type="submit" class="search-button"><i class="fal fa-search"></i></button>
-                                <input type="text" class="form-control" placeholder="Search">
+                                <input type="text" class="form-control" placeholder="Search" name="query">
                             </div>
                         </form>
                     </div>

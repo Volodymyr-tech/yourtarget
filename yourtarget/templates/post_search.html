@@ -49,6 +49,9 @@
                         <!-- End Post List  -->
                         <!-- Start Post List -->
                         {% for post in posts %}
+                        {% if not posts %}
+                        {{ message }}
+                        {% endif %}
                         <div class="content-block post-list-view mt--30">
                             <div class="post-thumbnail">
                                 <a href="{{ post.get_absolute_url }}">
@@ -131,6 +134,7 @@
                             </nav>
                           </div>
                         {% endif %}
+
                         <!-- End Post List  -->
                     </div>
                         <div class="col-lg-4 col-xl-4 mt_md--40 mt_sm--40">
@@ -177,25 +181,6 @@
                                     <div class="post-medium-block">
 
                                         <!-- Start Single Post  -->
-                                        {% for post in popular_posts %}
-                                        <div class="content-block post-medium mb--20">
-
-                                            <div class="post-thumbnail">
-                                                <a href="post-details.html">
-                                                    <img src="{{ post.image.url }}" alt="Post Images">
-                                                </a>
-                                            </div>
-                                            <div class="post-content">
-                                                <h6 class="title"><a href="{{ post.get_absolute_url }}"> {{ post.title }} </a></h6>
-                                                <div class="post-meta">
-                                                    <ul class="post-meta-list">
-                                                        <li>{{ post.created_at }}</li>
-                                                        <li>{{ post.views }}</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {% endfor %}
                                         <!-- End Single Post  -->
                                     </div>
                                     <!-- End Post List  -->

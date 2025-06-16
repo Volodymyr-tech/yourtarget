@@ -1,0 +1,317 @@
+{% extends "includes/base.html" %}
+{% load static %}
+
+{% block title %}Powerful Backends — Scalable, Fast & Secure{% endblock %}
+
+{% block extra_css %}
+<style>
+  /* Hero */
+  .hero-section {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+  }
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .hero-section p.lead {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+
+  /* Features */
+  .features-section {
+    padding: 80px 0;
+  }
+  .feature-card {
+    transition: transform .3s;
+    border: none;
+    text-align: center;
+  }
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .feature-icon {
+    font-size: 3rem;
+    color: #2563eb;
+    margin-bottom: 15px;
+  }
+
+  /* Use Cases */
+  .usecases-section {
+    background: #f9fafb;
+    padding: 80px 0;
+  }
+  .usecase-card {
+    border: none;
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    transition: box-shadow .3s;
+  }
+  .usecase-card:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    padding: 80px 0;
+  }
+  .testimonial-item {
+    text-align: center;
+    padding: 30px;
+  }
+  .testimonial-item img {
+    border-radius: 50%;
+    width: 80px;
+    margin-bottom: 15px;
+  }
+
+  /* Pricing */
+  .pricing-section {
+    background: #fff;
+    padding: 80px 0;
+  }
+  .pricing-card {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 30px;
+    transition: transform .3s;
+  }
+  .pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  /* FAQ */
+  .faq-section {
+    padding: 80px 0;
+  }
+  .faq-item + .faq-item {
+    margin-top: 15px;
+  }
+
+  /* Contact */
+  .contact-section {
+    background: #f3f4f6;
+    padding: 80px 0;
+  }
+  .contact-section form .form-control {
+    margin-bottom: 15px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Powerful Backends for Scalable Business Solutions</h1>
+      <p class="lead">Fast, secure, and reliable architectures tailored to your growth.</p>
+      <a href="#contact" class="btn btn-light btn-lg mt-3">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card p-4">
+            <div class="card-body">
+              <i class="fas fa-tachometer-alt feature-icon"></i>
+              <h5 class="card-title">High Performance</h5>
+              <p>Optimized code and infrastructure for lightning-fast response times.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card p-4">
+            <div class="card-body">
+              <i class="fas fa-cloud feature-icon"></i>
+              <h5 class="card-title">Scalable Architecture</h5>
+              <p>Effortless scaling to handle traffic spikes and growing user base.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card feature-card p-4">
+            <div class="card-body">
+              <i class="fas fa-lock feature-icon"></i>
+              <h5 class="card-title">Robust Security</h5>
+              <p>Industry-standard encryption and secure best practices at every layer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="usecases-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Use Cases</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div class="card usecase-card">
+            <h6>E-commerce Platforms</h6>
+            <p>Handle thousands of transactions per minute.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card usecase-card">
+            <h6>SaaS Applications</h6>
+            <p>Reliable APIs for millions of users.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card usecase-card">
+            <h6>IoT Backends</h6>
+            <p>Process real-time data from devices.</p>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card usecase-card">
+            <h6>Mobile Apps</h6>
+            <p>Fast and secure data synchronization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="text-center mb-5">What Our Clients Say</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="testimonial-item">
+            <img src="{% static 'images/client1.jpg' %}" alt="Client 1">
+            <p>“Their backend improved our performance by 200%. Couldn't be happier!”</p>
+            <h6>— Alex Johnson, CEO of ShopEase</h6>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="testimonial-item">
+            <img src="{% static 'images/client2.jpg' %}" alt="Client 2">
+            <p>“Scalable, reliable, and secure. Exactly what we needed for our IoT platform.”</p>
+            <h6>— Maria Garcia, CTO of SmartHome Inc.</h6>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="testimonial-item">
+            <img src="{% static 'images/client3.jpg' %}" alt="Client 3">
+            <p>“Seamless integration and round-the-clock support. Highly recommended!”</p>
+            <h6>— Liam Smith, Founder of FitTrack</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Pricing Plans</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card pricing-card p-4">
+            <h5>Basic</h5>
+            <p class="display-4">$499</p>
+            <p>Includes up to 10k users</p>
+            <ul class="list-unstyled">
+              <li>Standard Performance</li>
+              <li>Basic Security</li>
+              <li>Email Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Choose</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card pricing-card p-4 border-primary">
+            <h5>Pro</h5>
+            <p class="display-4">$999</p>
+            <p>Includes up to 100k users</p>
+            <ul class="list-unstyled">
+              <li>High Performance</li>
+              <li>Advanced Security</li>
+              <li>Priority Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Choose</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card pricing-card p-4">
+            <h5>Enterprise</h5>
+            <p class="display-4">Custom</p>
+            <p>Unlimited users</p>
+            <ul class="list-unstyled">
+              <li>Enterprise-grade Performance</li>
+              <li>Dedicated Security Team</li>
+              <li>24/7 Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+      <div id="accordion">
+        <div class="card faq-item">
+          <div class="card-header" id="faq1">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#collapse1">How long does integration take?</button>
+            </h5>
+          </div>
+          <div id="collapse1" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              Integration typically takes 2-4 weeks depending on complexity.
+            </div>
+          </div>
+        </div>
+        <div class="card faq-item">
+          <div class="card-header" id="faq2">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapse2">Do you offer maintenance?</button>
+            </h5>
+          </div>
+          <div id="collapse2" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              Yes, we offer 24/7 maintenance and monitoring plans.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Contact Us</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form method="post" action="{% url 'blog:subscribe' %}">
+            {% csrf_token %}
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            <textarea name="message" class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+            <div class="text-center mt-3">
+              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
