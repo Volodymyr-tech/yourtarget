@@ -1,4 +1,6 @@
+from django.http import Http404
 from django.shortcuts import render
+from django.template.loader import get_template
 from django.views.generic import ListView, DetailView
 
 from blog.models import BlogPost, Services, Categories
@@ -53,7 +55,7 @@ class ProductSearchView(ListView):
 class ServicesDetailView(DetailView):
     model = Services
     context_object_name = "service"
-    template_name = 'website-development.html'
+   # template_name = 'web-dev.html'
     slug_field = "slug"
     slug_url_kwarg = "slug"
 
@@ -61,3 +63,13 @@ class ServicesDetailView(DetailView):
     def get_object(self, queryset=None):
         self.object = super().get_object(queryset)
         return self.object
+
+
+    def get_template_names(self):
+        slug = self.kwargs.get('slug')
+        template_name = f"{slug}.html"
+        try:
+            get_template(template_name)  # проверим наличие шаблона
+        except Exception:
+            raise Http404(f"No such template: {template_name}")
+        return [template_name]

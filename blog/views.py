@@ -58,3 +58,10 @@ class BlogPostListView(ListView):
 
 def cta(request):
     return render(request, "cta.html")
+
+
+
+class CategoriesPostsListView(ListView):
+    model = Categories
+    template_name = 'post_categories.html'
+    context_object_name = 'post_categories'
