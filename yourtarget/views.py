@@ -45,10 +45,6 @@ class ProductSearchView(ListView):
             return BlogPost.objects.filter(
                 title__icontains=query
             )  # Поиск по названию продукта
-        else:
-            context = {
-         'message': 'Look like we dont have it'
-     }
             return context
 
 

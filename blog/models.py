@@ -80,6 +80,9 @@ class Categories(models.Model):
         return self.get_name_display()
 
 
+    def get_absolute_url(self):
+        return reverse("blog:categories_posts")
+
 
 
 class Subscriber(models.Model):

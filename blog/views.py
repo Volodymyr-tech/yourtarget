@@ -80,6 +80,7 @@ class CategoriesPostsListView(ListView):
     context_object_name = 'post_categories'
 
 
-    def get_queryset(self):
-        queryset = Categories.objects.all()
-        return queryset
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["popular_posts"] = BlogPost.objects.filter(status='PUBLISHED').order_by("-views")[:3]
+        return context
