@@ -17,8 +17,14 @@ from yourtarget.services import CacheMainPage
 #     return render(request, 'index.html', context)
 
 
-def lifestyle(request):
-    return render(request, "home-lifestyle-blog.html")
+def contact_us(request):
+    return render(request, "contact.html")
+
+def not_found(request):
+    return render(request, "404.html")
+
+def about(request):
+    return render(request, "about.html")
 
 
 class MainPageView(ListView):

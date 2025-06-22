@@ -517,44 +517,23 @@
                             <li class="menu-item-has-children"><a href="#">Pages</a>
                                 <ul class="axil-submenu">
                                     <li>
-                                        <a class="hover-flip-item-wrapper" href="post-list.html">
-                                            <span class="hover-flip-item">
-                <span data-text="Post List">Post List</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="hover-flip-item-wrapper" href="author.html">
-                                            <span class="hover-flip-item">
-                <span data-text="Author Page">Author Page</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="hover-flip-item-wrapper" href="about.html">
+                                        <a class="hover-flip-item-wrapper" href="{% url 'yourtarget:about' %}">
                                             <span class="hover-flip-item">
                 <span data-text="About Page">About Page</span>
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="hover-flip-item-wrapper" href="contact.html">
+                                        <a class="hover-flip-item-wrapper" href="{% url 'yourtarget:contact-us' %}">
                                             <span class="hover-flip-item">
                 <span data-text="Contact Us">Contact Us</span>
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="hover-flip-item-wrapper" href="404.html">
+                                        <a class="hover-flip-item-wrapper" href="{% url 'yourtarget:error404' %}">
                                             <span class="hover-flip-item">
                 <span data-text="404 Page">404 Page</span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="hover-flip-item-wrapper" href="maintenance.html">
-                                            <span class="hover-flip-item">
-                <span data-text="Maintenance">Maintenance</span>
                                             </span>
                                         </a>
                                     </li>
@@ -567,7 +546,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="{% url 'yourtarget:lifestyle' %}" >Lifestyle</a></li>
+                            <li><a href="#" >Lifestyle</a></li>
                         </ul>
                         <!-- End Mainmanu Nav -->
                     </nav>
