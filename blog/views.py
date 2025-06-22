@@ -1,4 +1,6 @@
+from django.http import Http404
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.views.decorators.http import require_POST
 from django.views.generic import DetailView, ListView
 
@@ -47,7 +49,18 @@ class BlogPostListView(ListView):
     paginate_by = 5
 
     def get_queryset(self):
-        return BlogPost.objects.filter(status='PUBLISHED').order_by('-created_at')
+        queryset = BlogPost.objects.filter(status='PUBLISHED').order_by('-created_at')
+        filter_param = self.request.GET.get("filter")  # Получаем параметр `filter`
+
+        print("GET parameters:", self.request.GET)  # Логируем параметры
+
+        print(filter_param)
+
+        if filter_param:
+            return queryset.filter(category=filter_param)
+        else:
+            return queryset
+
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -65,3 +78,8 @@ class CategoriesPostsListView(ListView):
     model = Categories
     template_name = 'post_categories.html'
     context_object_name = 'post_categories'
+
+
+    def get_queryset(self):
+        queryset = Categories.objects.all()
+        return queryset

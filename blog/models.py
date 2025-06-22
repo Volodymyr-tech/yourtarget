@@ -67,6 +67,7 @@ class Categories(models.Model):
     ]
 
     name = models.CharField(choices=CATEGORIES_NAMES_CHOICES, verbose_name='Category post name')
+    image = models.ImageField(upload_to="blog/categories/images/", blank=True, null=True)
 
 
     class Meta:
