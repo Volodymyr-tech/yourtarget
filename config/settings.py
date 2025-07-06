@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 import os
+from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -26,7 +27,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "172.17.0.1",]
 
 
 # Application definition
@@ -49,10 +50,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -138,7 +139,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
@@ -170,13 +171,48 @@ CACHE_ENABLED = True
 
 if CACHE_ENABLED:
     CACHES = {
-        'default': {
-            'BACKEND': 'django.core.cache.backends.redis.RedisCache',
-            'LOCATION': 'redis://127.0.0.1:6379/1',
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": os.getenv("CELERY_RESULT_BACKEND"),
         }
     }
 
 INTERNAL_IPS = [
-    "127.0.0.1",
+    "localhost", "127.0.0.1", "172.17.0.1",
 ]
 
+# CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",  # FRONTEND
+]
+
+CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:8000"]
+
+CORS_ALLOW_ALL_ORIGINS = False
+
+# Settings for Celery
+
+# The URL of the message broker
+CELERY_BROKER_URL = os.getenv(
+    "CELERY_BROKER_URL"
+)   # For example, Redis, which runs on port 6379 by default.
+
+# The URL of the results broker, also Redis
+CELERY_RESULT_BACKEND = os.getenv("CELERY_RESULT_BACKEND")
+
+# timezone
+CELERY_TIMEZONE = "UTC"
+
+# Task tracking flag
+CELERY_TASK_TRACK_STARTED = True
+
+# Maximum time to complete a task
+CELERY_TASK_TIME_LIMIT = 30 * 60
+
+# Settings for Celery
+# CELERY_BEAT_SCHEDULE = {
+#     "send_notification": {
+#         "task": "atomicshabbits.tasks.send_notification",  # add way to the task
+#         "schedule": timedelta(minutes=5),  # schedule for the task
+#     },
+# }
