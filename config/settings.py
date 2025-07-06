@@ -45,8 +45,7 @@ INSTALLED_APPS = [
     'blog',
     'ckeditor',
     'ckeditor_uploader',
-
-
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -180,3 +179,4 @@ if CACHE_ENABLED:
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
