@@ -47,7 +47,6 @@ class ProductSearchView(ListView):
 class ServicesDetailView(DetailView):
     model = Services
     context_object_name = "service"
-   # template_name = 'web-dev.html'
     slug_field = "slug"
     slug_url_kwarg = "slug"
 

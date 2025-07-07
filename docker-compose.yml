@@ -9,6 +9,7 @@ services: # describing services we're going to use
 
     env_file:
       - .env # giving access to environment variables
+      - .env.docker
     command: >
       sh -c "python manage.py makemigrations && \
              python manage.py migrate && \
@@ -34,6 +35,7 @@ services: # describing services we're going to use
     image: postgres:17 # using image from DockerHub
     env_file: # giving access to environment variables
       - .env
+      - .env.docker
     volumes:  # it allows us to save data even if container was stopped
       - postgres_data:/var/lib/postgresql/data
     healthcheck: # testing DB before we start server
@@ -48,6 +50,7 @@ services: # describing services we're going to use
     image: redis:7 # using image from DockerHub
     env_file: # giving access to environment variables
       - .env
+      - .env.docker
     healthcheck:
       test: ['CMD-SHELL', 'redis-cli', 'ping']
       interval: 30s
@@ -64,6 +67,7 @@ services: # describing services we're going to use
 
     env_file:
       - .env
+      - .env.docker
     command: >
       celery -A config worker -l INFO -P eventlet
     volumes:
@@ -82,6 +86,7 @@ services: # describing services we're going to use
 
     env_file:
       - .env
+      - .env.docker
     command: >
       sh -c "python manage.py migrate && \
              celery -A config beat -l INFO -S django"
