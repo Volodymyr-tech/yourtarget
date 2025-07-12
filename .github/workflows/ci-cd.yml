@@ -23,10 +23,10 @@ jobs:
 
       - name: Push backend, nginx, celery and celery beat images
         run: |
-          docker push valdemarbackend/yourtargetai-web
+          docker push valdemarbackend/yourtargetai-backend
           docker push valdemarbackend/yourtargetai-nginx
           docker push valdemarbackend/yourtargetai-celery
-          docker push valdemarbackend/yourtargetai-celery_beat
+          docker push valdemarbackend/yourtargetai-beat
 
       - name: Pull & Push official Postgres and Redis
         run: |
