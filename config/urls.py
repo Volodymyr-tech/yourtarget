@@ -25,8 +25,14 @@ from config.settings import BASE_DIR
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('yourtarget.urls' , namespace="yourtarget")),
+    path('blog/', include('blog.urls', namespace='blog')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL,
-                          document_root=BASE_DIR / 'static')
+    import debug_toolbar
+    urlpatterns += [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ]
+
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

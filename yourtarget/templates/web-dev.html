@@ -1,0 +1,795 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block title %}Your Target AI{% endblock %}
+{% block content %}
+<!-- Start Banner Area -->
+<h1 class="d-none">Home Default Blog</h1>
+<div class="slider-area bg-color-grey">
+    <div class="axil-slide slider-style-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="slider-activation axil-slick-arrow">
+                        <!-- Start Single Slide  -->
+                        <div class="content-block">
+                            <!-- Start Post Thumbnail  -->
+                            <div class="post-thumbnail">
+                                <a href="post-details.html">
+                                    <img src="{% static 'assets/images/post-images/web-dev.png' %}" alt="Post Images">
+                                </a>
+                            </div>
+                            <!-- End Post Thumbnail  -->
+
+                            <!-- Start Post Content  -->
+                            <div class="post-content">
+                                <div class="post-cat">
+                                    <div class="post-cat-list">
+                                        <a class="hover-flip-item-wrapper" href="#">
+                                            <span class="hover-flip-item">
+                                                <span data-text="Your Target">Your Target</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h2 class="title"><a href="post-details.html">{{service.name}}</a></h2>
+                                <!-- Post Meta  -->
+                                <div class="post-meta-wrapper with-button">
+                                    <div class="post-meta">
+                                        <div class="post-author-avatar border-rounded">
+                                            <img src="assets/images/post-images/author/author-image-3.png" alt="Author Images">
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="post-author-name">
+                                                <a class="hover-flip-item-wrapper" href="author.html">
+                                                    <span class="hover-flip-item">
+                                                        <span data-text="Valdemar Teslenko">Valdemar Teslenko</span>
+                                                    </span>
+                                                </a>
+                                            </h6>
+                                            <ul class="post-meta-list">
+                                                <li>Feb 17, 2019</li>
+                                                <li>300k Views</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="social-share-transparent justify-content-end">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-link"></i></a></li>
+                                    </ul>
+                                    <div class="read-more-button cerchio">
+                                        <a class="axil-button button-rounded hover-flip-item-wrapper" href="post-details.html">
+                                            <span class="hover-flip-item">
+                                                <span data-text="Read Post">Read Post</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Post Content  -->
+                        </div>
+                        <!-- End Single Slide  -->
+
+                        <!-- Start Single Slide  -->
+                        <div class="content-block">
+                            <!-- Start Post Thumbnail  -->
+                            <div class="post-thumbnail">
+                                <a href="post-details.html">
+                                    <img src="assets/images/post-images/gallery-post-03.jpg" alt="Post Images">
+                                </a>
+                            </div>
+                            <!-- End Post Thumbnail  -->
+                            <!-- Start Post Content  -->
+                            <div class="post-content">
+                                <div class="post-cat">
+                                    <div class="post-cat-list">
+                                        <a class="hover-flip-item-wrapper" href="#">
+                                            <span class="hover-flip-item">
+                                                <span data-text="CAREERS">CAREERS</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h2 class="title"><a href="post-details.html">These 5 tips will help you nail your next design presentation</a></h2>
+
+                                <!-- Post Meta  -->
+                                <div class="post-meta-wrapper with-button">
+                                    <div class="post-meta">
+                                        <div class="post-author-avatar border-rounded">
+                                            <img src="assets/images/post-images/author/author-image-1.png" alt="Author Images">
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="post-author-name">
+                                                <a class="hover-flip-item-wrapper" href="author.html">
+                                                    <span class="hover-flip-item">
+                                                        <span data-text="Syed Tahmim">Syed Tahmim</span>
+                                                    </span>
+                                                </a>
+
+                                            </h6>
+                                            <ul class="post-meta-list">
+                                                <li>Feb 17, 2019</li>
+                                                <li>300k Views</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="social-share-transparent justify-content-end">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-link"></i></a></li>
+                                    </ul>
+                                    <div class="read-more-button cerchio">
+                                        <a class="axil-button button-rounded hover-flip-item-wrapper" href="post-details.html">
+                                            <span class="hover-flip-item">
+                                                <span data-text="Read Post">Read Post</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Post Content  -->
+                        </div>
+                        <!-- End Single Slide  -->
+
+                        <!-- Start Single Slide  -->
+                        <div class="content-block">
+                            <!-- Start Post Thumbnail  -->
+                            <div class="post-thumbnail">
+                                <a href="post-details.html">
+                                    <img src="assets/images/post-images/gallery-post-02.jpg" alt="Post Images">
+                                </a>
+                            </div>
+                            <!-- End Post Thumbnail  -->
+                            <!-- Start Post Content  -->
+                            <div class="post-content">
+                                <div class="post-cat">
+                                    <div class="post-cat-list">
+                                        <a class="hover-flip-item-wrapper" href="#">
+                                            <span class="hover-flip-item">
+                                                <span data-text="DESIGN">DESIGN</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <h2 class="title"><a href="post-details.html">iPadOS 14 introduces
+                                        new designed specifically for iPad</a></h2>
+
+                                <!-- Post Meta  -->
+                                <div class="post-meta-wrapper with-button">
+                                    <div class="post-meta">
+                                        <div class="post-author-avatar border-rounded">
+                                            <img src="assets/images/post-images/author/author-image-2.png" alt="Author Images">
+                                        </div>
+                                        <div class="content">
+                                            <h6 class="post-author-name">
+                                                <a class="hover-flip-item-wrapper" href="author.html">
+                                                    <span class="hover-flip-item">
+                                                        <span data-text="Ismat Jahan">Ismat Jahan</span>
+                                                    </span>
+                                                </a>
+
+                                            </h6>
+                                            <ul class="post-meta-list">
+                                                <li>Feb 17, 2019</li>
+                                                <li>300k Views</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="social-share-transparent justify-content-end">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fas fa-link"></i></a></li>
+                                    </ul>
+                                    <div class="read-more-button cerchio">
+                                        <a class="axil-button button-rounded hover-flip-item-wrapper" href="post-details.html">
+                                            <span class="hover-flip-item">
+                                                <span data-text="Read Post">Read Post</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Post Content  -->
+                        </div>
+                        <!-- End Single Slide  -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Banner Area -->
+
+<!-- Start Featured Area  -->
+<div class="axil-featured-post axil-section-gap bg-color-grey">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title">
+<h2 class="title">Powerful Backends for Scalable Business Solutions — Fast and Secure</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<!-- Start Single Post  -->
+<div class="col-lg-6 col-xl-6 col-md-12 col-12 mt--30">
+<div class="content-block content-direction-column axil-control is-active post-horizontal thumb-border-rounded">
+<div class="post-content">
+<div class="post-cat">
+<div class="post-cat-list">
+<a class="hover-flip-item-wrapper" href="#">
+<span class="hover-flip-item">
+    <span data-text="Your Target">Your Target</span>
+</span>
+</a>
+</div>
+</div>
+<h4 class="title">Websites that speak your customer’s language</a></h4>
+<div class="post-meta">
+
+<div class="content">
+
+</div>
+</div>
+</div>
+<div class="post-thumbnail">
+<a href="post-details.html">
+<img src="assets/images/post-images/post-images-1.png" alt="Post Images">
+</a>
+</div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="col-lg-6 col-xl-6 col-md-12 col-12 mt--30">
+<div class="content-block content-direction-column axil-control post-horizontal  thumb-border-rounded">
+<div class="post-content">
+<div class="post-cat">
+<div class="post-cat-list">
+<a class="hover-flip-item-wrapper" href="#">
+<span class="hover-flip-item">
+    <span data-text="Your Target">Your Target</span>
+</span>
+</a>
+</div>
+</div>
+<h4 class="title">Build once — grow without limits</a></h4>
+<div class="post-meta">
+
+<div class="content">
+
+<ul class="post-meta-list">
+
+</div>
+</div>
+</div>
+<div class="post-thumbnail">
+<a href="post-details.html">
+<img src="assets/images/post-images/post-images-2.png" alt="Post Images">
+</a>
+</div>
+</div>
+</div>
+<!-- End Single Post  -->
+</div>
+</div>
+</div>
+<!-- End Featured Area  -->
+
+<!-- Start Tab Area  -->
+<div class="axil-tab-area axil-section-gap bg-color-white">
+<div class="wrapper">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="axil-banner mb--30">
+<div class="thumbnail">
+<a href="#">
+<img class="w-100" src="assets/images/add-banner/banner-web-dev-1.png" alt="Banner Images">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title">
+<h2 class="title">We Build Websites That Actually Bring Clients</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12">
+
+
+<!-- Start Tab Content Wrapper  -->
+<div class="tab-content" id="axilTabContent">
+<div class="single-tab-content tab-pane fade show active" id="tabone" role="tabpanel" aria-labelledby="tab-one">
+<div class="modern-post-activation slick-layout-wrapper axil-slick-arrow arrow-between-side">
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="ACCESSIBILITY">ACCESSIBILITY</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">No templates, no confusion. Just a clean, fast, mobile-friendly site that shows who you are and what you offer — clearly.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-04.png" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="APPLE DESIGN">APPLE DESIGN</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">We make sure your site shows up when people search. SEO is included from the start — you don’t have to ask for it later.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-05.png" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="GADGETS">GADGETS</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">We design mobile-first — so your clients stay, scroll, and reach out.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-06.png" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="ACCESSIBILITY">ACCESSIBILITY</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Need clients to book appointments? Want a contact form or auto-reply in Telegram? We’ll build what fits your workflow — not just a “pretty page”.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-07.png" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+</div>
+</div>
+
+<div class="single-tab-content tab-pane fade" id="tabtwo" role="tabpanel" aria-labelledby="tab-two">
+<div class="modern-post-activation slick-layout-wrapper axil-slick-arrow arrow-between-side">
+
+<!-- End Single Post  -->
+
+</div>
+</div>
+
+<div class="single-tab-content tab-pane fade" id="tabthree" role="tabpanel" aria-labelledby="tab-three">
+<div class="modern-post-activation slick-layout-wrapper axil-slick-arrow arrow-between-side">
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="ACCESSIBILITY">ACCESSIBILITY</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Lightweight, grippable,
+                and ready to go.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-04.jpg" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="DESIGN">DESIGN</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Bold new experience.
+                Same Mac magic.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-08.jpg" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="DESIGN">DESIGN</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Lightweight, grippable,
+                and ready to go.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-01.jpg" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="DESIGN">DESIGN</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Lightweight, grippable,
+                and ready to go.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-02.jpg" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+</div>
+</div>
+
+<div class="single-tab-content tab-pane fade" id="tabfour" role="tabpanel" aria-labelledby="tab-four">
+<div class="modern-post-activation slick-layout-wrapper axil-slick-arrow arrow-between-side">
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="APPLE DESIGN">APPLE DESIGN</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Bold new experience.
+                Same Mac magic.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-03.jpg" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="GADGETS">GADGETS</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Creative Game With The New DJI Mavic Air 2</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-02.jpg" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="GADGETS">GADGETS</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Lightweight, grippable,
+                and ready to go.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-01.jpg" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+
+<!-- Start Single Post  -->
+<div class="slick-single-layout">
+<div class="content-block modern-post-style text-center content-block-column">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="GADGETS">GADGETS</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h4 class="title"><a href="post-details.html">Lightweight, grippable,
+                and ready to go.</a></h4>
+    </div>
+    <div class="post-thumbnail">
+        <a href="post-details.html">
+            <img src="assets/images/post-images/post-column-05.jpg" alt="Post Images">
+        </a>
+    </div>
+</div>
+</div>
+<!-- End Single Post  -->
+</div>
+</div>
+</div>
+<!-- End Tab Content Wrapper  -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Tab Area  -->
+
+<!-- Start List Wrapper  -->
+</div>
+</div>
+</div>
+</div>
+<!-- Start Categories List  -->
+
+<!-- Start Trending Post Area  -->
+<div class="axil-trending-post-area axil-section-gap bg-color-grey">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title">
+<h2 class="title">You Tell Us What You Need — We Choose the Best Tool</h2>
+</div>
+</div>
+<div class="col-lg-12">
+<!-- Start Tab Content  -->
+<div class="grid-tab-content tab-content mt--10">
+
+<!-- Start Single Tab Content  -->
+<div class="single-post-grid tab-pane fade show active" id="gridone" role="tabpanel">
+<div class="row">
+<div class="col-xl-7 col-lg-7 col-md-12 col-12">
+<!-- Start Post Grid  -->
+<div class="content-block post-grid post-grid-large mt--30">
+<div class="post-thumbnail">
+    <a href="post-details.html">
+        <img src="assets/images/post-images/post-grid-01.png" alt="Post Images">
+    </a>
+</div>
+<div class="post-grid-content">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="DESIGN">DESIGN</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h3 class="title"><a href="post-details.html">Just Starting Out? We’ll Launch You on a Simple Platform</a></h3>
+        <div class="post-meta-wrapper">
+            <div class="post-meta">
+                <div class="post-author-avatar border-rounded">
+                    <img src="assets/images/post-images/author/author-image-2.png" alt="Author Images">
+                </div>
+                <div class="content">
+                    <ul class="post-meta-list">
+                        <li>Tilda, Weblium or Wix — we use tools that don’t require you to be techy. We do the setup, connect your domain, and hand it over ready to go.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Start Post Grid  -->
+</div>
+<div class="col-xl-5 col-lg-5 col-md-12 col-12">
+<div class="row">
+<div class="col-xl-12 col-lg-12 col-md-6 col-12">
+    <!-- Start Post Grid  -->
+    <div class="content-block post-grid mt--30">
+        <div class="post-thumbnail">
+            <a href="post-details.html">
+                <img src="assets/images/post-images/post-grid-07.png" alt="Post Images">
+            </a>
+        </div>
+<div class="post-grid-content">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="DESIGN">DESIGN</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h3 class="title"><a href="post-details.html">Need Something Smarter? We’ll Build It for You
+</a></h3>
+        <div class="post-meta-wrapper">
+            <div class="post-meta">
+                <div class="post-author-avatar border-rounded">
+                    <img src="assets/images/post-images/author/author-image-2.png" alt="Author Images">
+                </div>
+                <div class="content">
+                    <ul class="post-meta-list">
+                        <li>If your business needs more logic — client areas, forms, automations — we’ll build it on a custom system that grows with you. And we’ll explain how to use it.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <!-- Start Post Grid  -->
+</div>
+<div class="col-xl-12 col-lg-12 col-md-6 col-12">
+    <!-- Start Post Grid  -->
+    <div class="content-block post-grid mt--30">
+        <div class="post-thumbnail">
+            <a href="post-details.html">
+                <img src="assets/images/post-images/post-grid-08.png" alt="Post Images">
+            </a>
+        </div>
+        <div class="post-grid-content">
+    <div class="post-content">
+        <div class="post-cat">
+            <div class="post-cat-list">
+                <a class="hover-flip-item-wrapper" href="#">
+                    <span class="hover-flip-item">
+                        <span data-text="DESIGN">DESIGN</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <h3 class="title"><a href="post-details.html">Already Have a Website? We’ll Fix or Rebuild It
+</a></h3>
+        <div class="post-meta-wrapper">
+            <div class="post-meta">
+                <div class="post-author-avatar border-rounded">
+                    <img src="assets/images/post-images/author/author-image-2.png" alt="Author Images">
+                </div>
+                <div class="content">
+                    <ul class="post-meta-list">
+                        <li>We’ll look at what’s working (and what’s not), and either improve your current site or move you to a setup that actually makes your life easier.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <!-- Start Post Grid  -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Single Tab Content  -->
+<div class="row mt-5">
+<div class="col-lg-12">
+<div class="axil-banner mb--30">
+<div class="thumbnail">
+<a href="#">
+<img class="w-100" src="assets/images/add-banner/banner-web-dev-2.png" alt="Banner Images">
+</a>
+</div>
+</div>
+</div>
+</div>
+    {% endblock %}
