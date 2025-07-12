@@ -7,16 +7,6 @@ from blog.models import BlogPost, Services, Categories
 from yourtarget.services import CacheMainPage
 
 
-# def index(request):
-#     # позже сюда можно передавать любые данные: ссылки на бота, тексты и т.п.
-#     context = {
-#         'bot_link': 'https://t.me/bobwinchester_1',
-#         'headline': 'Добро пожаловать! Получите консультацию в Telegram',
-#         'description': 'Нажмите кнопку ниже, чтобы начать диалог с нашим AI-ассистентом'
-#     }
-#     return render(request, 'index.html', context)
-
-
 def contact_us(request):
     return render(request, "contact.html")
 
@@ -57,7 +47,6 @@ class ProductSearchView(ListView):
 class ServicesDetailView(DetailView):
     model = Services
     context_object_name = "service"
-   # template_name = 'web-dev.html'
     slug_field = "slug"
     slug_url_kwarg = "slug"
 

@@ -14,19 +14,13 @@ class CacheMainPage:
             cache_main_sessionid = cache.get(cache_key)
 
             if cache_main_sessionid is None:
-                print("💾 Кэш пуст, запрашиваем данные...")
+                print("💾 Cache empty, making request to DB...")
                 context = {
-                "posts": list(BlogPost.objects.all()),
-                "popular_posts": list(BlogPost.objects.filter(status='PUBLISHED').order_by("-views")[:7]),
+                "posts": list(BlogPost.objects.filter(status='PUBLISHED').order_by("-views")[:4]),
                 "services_categories": list(Categories.objects.all()),
                 "services": list(Services.objects.all())
                 }
-                print("Популярные посты:", BlogPost.objects.filter(status='PUBLISHED').order_by("-views")[:7].query)
-
                 cache.set(cache_key, context, 60 * 60)  # Cache for 1 hour
                 return context
 
             return cache_main_sessionid
-
-
-
